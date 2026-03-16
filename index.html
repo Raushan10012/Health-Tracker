@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anime Health Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<video autoplay muted loop id="bgVideo">
+<source src="background.mp4" type="video/mp4">
+</video>    
+<header>
+
+<h1 class="title">Health Dashboard</h1>
+
+<nav class="nav">
+<button onclick="goHome()">Home</button>
+<button onclick="showBMI()">BMI</button>
+<button onclick="showAge()">Age</button>
+</nav>
+
+</header>
+
+
+<!-- HOME PAGE -->
+
+<div id="home" class="page active">
+
+<div class="welcome">
+
+<h2>Welcome to Your Anime Health Dashboard</h2>
+
+<p>Track BMI, calculate age, and get fitness suggestions.</p>
+
+</div>
+
+</div>
+
+
+
+<!-- BMI PAGE -->
+
+<div id="bmiPage" class="page">
+
+<main class="dashboard">
+
+<section class="widget">
+
+<h2>BMI Calculator</h2>
+
+<img src="fit.png">
+
+<input type="number" id="height" placeholder="Height (cm)">
+<input type="number" id="weight" placeholder="Weight (kg)">
+
+<button onclick="calculateBMI()">Calculate BMI</button>
+
+<p id="bmi"></p>
+
+</section>
+
+</main>
+
+</div>
+
+
+
+<!-- AGE PAGE -->
+
+<div id="agePage" class="page">
+
+<main class="dashboard">
+
+<section class="widget">
+
+<h2>Age Calculator</h2>
+
+<input type="date" id="dob">
+
+<button onclick="calculateAge()">Calculate Age</button>
+
+<p id="ageYears"></p>
+<p id="ageDays"></p>
+<p id="ageHours"></p>
+<p id="ageMinutes"></p>
+<p id="ageSeconds"></p> 
+
+
+</section>
+
+</main>
+
+</div>
+
+
+
+<!-- FLOATING ASSISTANT -->
+
+<div class="assistant">
+
+<img id="assistantImg" src="assistant-normal.png">
+
+<p id="assistantText">
+Hello! Let's check your health.
+</p>
+
+</div>
+
+
+<!-- SAKURA BACKGROUND -->
+
+<div class="sakura"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
